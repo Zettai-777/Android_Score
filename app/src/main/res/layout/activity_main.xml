@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.example.android.mysecondtry.MainActivity">
+
+    <ImageView
+            android:src="@drawable/maxresdefault"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+            <TextView
+                    android:id="@+id/display_teamA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Kuroko's team"
+                    android:fontFamily="cursive"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#3d5afe"
+                    android:textSize="27sp"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/display_score_team_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="0"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#fafafa"
+                    android:textSize="56sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+            <Button
+                    android:id="@+id/plus_3_points_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="+3 POINTS"
+                    android:textStyle="bold"
+                    android:onClick="addScore"/>
+
+            <Button
+                    android:id="@+id/plus_2_points_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="+2 POINTS"
+                    android:textStyle="bold"
+                    android:onClick="addScore"/>
+
+            <Button
+                    android:id="@+id/free_throw_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="free throw"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:onClick="addScore"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="#fafafa"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+            <TextView
+                    android:id="@+id/display_teamB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="cursive"
+                    android:text="Enemy team"
+                    android:textColor="#d50000"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+            <TextView
+                    android:id="@+id/display_score_team_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="0"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#fafafa"
+                    android:textSize="56sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+            <Button
+                    android:id="@+id/plus_3_points_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="+3 POINTS"
+                    android:textStyle="bold"
+                    android:onClick="addScore"/>
+
+            <Button
+                    android:id="@+id/plus_2_points_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="+2 POINTS"
+                    android:textStyle="bold"
+                    android:onClick="addScore"/>
+
+            <Button
+                    android:id="@+id/free_throw_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="free throw"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:onClick="addScore"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        <Button
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="reset score"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:onClick="addScore"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
